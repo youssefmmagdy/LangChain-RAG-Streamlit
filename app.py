@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS as LCFAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.chains import RetrievalQA
 from langchain.llms.base import LLM
 from typing import Optional, List, Any
@@ -103,6 +103,9 @@ class GemmaLangChainWrapper(LLM):
     client: Any = Field(...)
     max_tokens: int = 500
     temperature: float = 0.2
+
+    class Config:
+        arbitrary_types_allowed = True
 
     @property
     def _llm_type(self) -> str:

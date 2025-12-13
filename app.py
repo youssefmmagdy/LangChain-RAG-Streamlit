@@ -10,6 +10,10 @@ from pypdf import PdfReader
 from huggingface_hub import InferenceClient
 import tempfile
 import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # Page configuration
 st.set_page_config(
@@ -32,11 +36,12 @@ if "chat_history" not in st.session_state:
 with st.sidebar:
     st.header("⚙️ Configuration")
     
-    hf_token = st.text_input(
-        "HuggingFace API Token",
-        type="password",
-        help="Your HuggingFace API token"
-    )
+    # Load HuggingFace token from .env file
+    hf_token = os.getenv("HUGGINGFACE_API_TOKEN")
+    
+    if not hf_token:
+        st.error("❌ HUGGINGFACE_API_TOKEN not found in .env file")
+    
     
     pdf_file = st.file_uploader(
         "Upload PDF file",

@@ -4,7 +4,7 @@ A **Retrieval-Augmented Generation (RAG)** chatbot that allows users to upload a
 The application is built with **LangChain** for RAG orchestration, **FAISS** for vector similarity search, **HuggingFace Inference API (Gemma 2B)** for generation, and **Streamlit** for an interactive web interface.
 
 🚀 **Live Demo:**
-👉 [https://langchain-pinecone-rag-he7mwchouhfqdxkjedsywd.streamlit.app/)
+👉 [https://langchain-rag-app.streamlit.app/)
 
 ---
 
@@ -129,7 +129,7 @@ The following parameters can be adjusted from the sidebar:
 The application is deployed using **Streamlit Community Cloud**.
 
 🔗 **Live Application:**
-[https://langchain-pinecone-rag-he7mwchouhfqdxkjedsywd.streamlit.app/)
+[https://langchain-rag-app.streamlit.app/)
 
 ---
 

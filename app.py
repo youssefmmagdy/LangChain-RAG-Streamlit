@@ -37,7 +37,7 @@ with st.sidebar:
     st.header("⚙️ Configuration")
     
     # Load HuggingFace token from .env file
-    hf_token = os.getenv("HUGGINGFACE_API_TOKEN")
+    hf_token = os.getenv("HF_TOKEN")
     
     if not hf_token:
         st.error("❌ HUGGINGFACE_API_TOKEN not found in .env file")

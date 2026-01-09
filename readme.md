@@ -5,6 +5,7 @@ The application is built with **LangChain** for RAG orchestration, **FAISS** for
 
 🚀 **Live Demo:**
 👉 [https://langchain-rag-app.streamlit.app/)
+![Live Demo](assets/demo.gif)
 
 ---
 
